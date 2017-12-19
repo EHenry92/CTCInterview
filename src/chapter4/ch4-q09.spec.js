@@ -11,17 +11,17 @@ for (let key in funcs) {
       this.tree = new helpers.Tree();
     });
 
-    it('returns correct permutations for single node tree', function() {
+    xit('returns correct permutations for single node tree', function() {
       this.tree.add(1);
       expect(func(this.tree)).to.eql([[1]]);
     });
 
-    it('returns correct permutations for 3 node tree', function() {
+    xit('returns correct permutations for 3 node tree', function() {
       [2, 1, 3].forEach(v => this.tree.add(v));
       expect(func(this.tree)).to.eql([[2, 1, 3], [2, 3, 1]]);
     });
 
-    it('returns correct permutations for 5 node tree', function() {
+    xit('returns correct permutations for 5 node tree', function() {
       [4, 2, 3, 1, 5].forEach(v => this.tree.add(v));
       expect(func(this.tree)).to.eql([
         [4, 2, 1, 3, 5],

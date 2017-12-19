@@ -10,12 +10,12 @@ for (let key in classes) {
       this.stack = new Stack();
     });
 
-    it('min is undefined when stack is empty', function() {
+    xit('min is undefined when stack is empty', function() {
       expect(this.stack.isEmpty()).to.be.true;
       expect(this.stack.min()).to.be.undefined;
     });
 
-    it('can push values in ascending order and min stays the same', function() {
+    xit('can push values in ascending order and min stays the same', function() {
       let values = [2, 4, 6, 8, 10, 12];
 
       values.forEach(v => {
@@ -31,7 +31,7 @@ for (let key in classes) {
       expect(this.stack.min()).to.be.undefined;
     });
 
-    it('can push values in descending order and min is updated', function() {
+    xit('can push values in descending order and min is updated', function() {
       let values = [12, 10, 8, 6, 4, 2];
 
       values.forEach(v => {

@@ -6,7 +6,7 @@ for (let key in funcs) {
 
   describe('ch1-q5: ' + key, function() {
 
-    it('returns true for the same string', function() {
+    xit('returns true for the same string', function() {
       let str = 'abcdef';
       expect(func(str, str)).to.be.true;
       str = 'a1b2c3d4';
@@ -24,7 +24,7 @@ for (let key in funcs) {
       ['technology', 'etechnology']
     ].forEach(args => {
 
-      it(`returns true for strings that are one edit: '${args[0]}' & '${args[1]}'`, function() {
+      xit(`returns true for strings that are one edit: '${args[0]}' & '${args[1]}'`, function() {
         expect(func(args[0], args[1])).to.be.true;
       });
 
@@ -40,7 +40,7 @@ for (let key in funcs) {
       ['abcd', 'dcba']
     ].forEach(args => {
 
-      it(`returns false for strings that are more than one edit: '${args[0]}' & '${args[1]}'`, function() {
+      xit(`returns false for strings that are more than one edit: '${args[0]}' & '${args[1]}'`, function() {
         expect(func(args[0].split(''), args[1].split(''))).to.be.false;
       });
 

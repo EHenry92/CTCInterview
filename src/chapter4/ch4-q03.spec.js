@@ -15,16 +15,16 @@ for (let key in funcs) {
       this.tree = new Tree();
     });
 
-    it('returns empty list for empty tree', function() {
+    xit('returns empty list for empty tree', function() {
       expect(toArrayOfArrays(func(this.tree))).to.eql([]);
     });
 
-    it('returns true for single node tree', function() {
+    xit('returns true for single node tree', function() {
       this.tree.add(10);
       expect(toArrayOfArrays(func(this.tree))).to.eql([[10]]);
     });
 
-    it('returns single value lists for left heavy tree', function() {
+    xit('returns single value lists for left heavy tree', function() {
       [10, 9, 8].forEach(v => this.tree.add(v));
       expect(toArrayOfArrays(func(this.tree))).to.eql([
         [10],
@@ -33,7 +33,7 @@ for (let key in funcs) {
       ]);
     });
 
-    it('returns 2 value lists for upside down V shaped tree', function() {
+    xit('returns 2 value lists for upside down V shaped tree', function() {
       [10, 11, 12, 13, 9, 8, 7].forEach(v => this.tree.add(v));
       expect(toArrayOfArrays(func(this.tree))).to.eql([
         [10],
@@ -43,7 +43,7 @@ for (let key in funcs) {
       ]);
     });
 
-    it('returns true for larger balanced tree', function() {
+    xit('returns true for larger balanced tree', function() {
       let expected = [];
       this.tree.add(8);
       expected.push([8]);

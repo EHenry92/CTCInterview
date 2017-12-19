@@ -7,13 +7,13 @@ for (let key in funcs) {
 
   describe('ch2-q3: ' + key, function() {
 
-    it('throws an error if node is invalid', function() {
+    xit('throws an error if node is invalid', function() {
       expect(() => func(null)).to.throw('invalid node');
       expect(() => func(undefined)).to.throw('invalid node');
       expect(() => func(helpers.arrayToLinkedList([11]))).to.throw('invalid node');
     });
 
-    it('can delete multiple in long list', function() {
+    xit('can delete multiple in long list', function() {
       let list = helpers.arrayToLinkedList([8, 6, 4, 2, 1]);
       func(list);
       func(list);
@@ -51,7 +51,7 @@ for (let key in funcs) {
       }
     ].forEach(context => {
 
-      it(`removing node ${context.node} from list ${context.list}`, function() {
+      xit(`removing node ${context.node} from list ${context.list}`, function() {
         let list = helpers.arrayToLinkedList(context.list),
           node = list;
         for (let i = 0; i < context.node; ++i) {

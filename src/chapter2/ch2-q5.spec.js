@@ -45,7 +45,7 @@ for (let key in funcs) {
       }
     ].forEach(context => {
 
-      it(`correctly adds ${context.one} and ${context.two}`, function() {
+      xit(`correctly adds ${context.one} and ${context.two}`, function() {
         let result = func(helpers.arrayToLinkedList(context.one),
           helpers.arrayToLinkedList(context.two));
         expect(helpers.linkedListToArray(result)).to.eql(context.expected);

@@ -6,12 +6,12 @@ for (let key in funcs) {
 
   describe('ch1-q3: ' + key, function() {
 
-    it('works with null/undefined as input', function() {
+    xit('works with null/undefined as input', function() {
       expect(func(undefined)).to.be.undefined;
       expect(func(null)).to.be.null;
     });
 
-    it('works with an empty array as input', function() {
+    xit('works with an empty array as input', function() {
       expect(func([])).to.eql([]);
     });
 
@@ -28,7 +28,7 @@ for (let key in funcs) {
       'http://www.google.com/search?q=something really really funny'
     ].forEach(arg => {
 
-      it(`returns true for unique string: '${arg}'`, function() {
+      xit(`returns true for unique string: '${arg}'`, function() {
         let expected = arg.replace(/ /g, '%20').split('');
         expect(func(arg.split(''))).to.eql(expected);
       });

@@ -10,11 +10,11 @@ for (let key in classes) {
       this.stack = new Stack(4);
     });
 
-    it('constructor throws error when maxSize isnt passed in', function () {
+    xit('constructor throws error when maxSize isnt passed in', function () {
       expect(() => new Stack()).to.throw('maxSize argument is required');
     });
 
-    it('can push 100 items and pop them in order', function () {
+    xit('can push 100 items and pop them in order', function () {
       let i;
       for (i = 1; i <= 100; ++i) {
         this.stack.push(i);
@@ -25,7 +25,7 @@ for (let key in classes) {
       }
     });
 
-    it('pop works correctly after using popAt to remove one from each stack', function () {
+    xit('pop works correctly after using popAt to remove one from each stack', function () {
       let i;
       for (i = 1; i <= 16; ++i) {
         this.stack.push(i);
@@ -40,7 +40,7 @@ for (let key in classes) {
       }
     });
 
-    it('can push 20 items and popAt to remove whole stacks worth of items from middle', function () {
+    xit('can push 20 items and popAt to remove whole stacks worth of items from middle', function () {
       let i;
       for (i = 1; i <= 20; ++i) {
         this.stack.push(i);

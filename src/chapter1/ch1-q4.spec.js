@@ -6,12 +6,12 @@ for (let key in funcs) {
 
   describe('ch1-q4: ' + key, function() {
 
-    it('returns false with null/undefined as input', function() {
+    xit('returns false with null/undefined as input', function() {
       expect(func(undefined)).to.be.false;
       expect(func(null)).to.be.false;
     });
 
-    it('returns true for an empty array', function() {
+    xit('returns true for an empty array', function() {
       expect(func([])).to.be.true;
     });
 
@@ -25,7 +25,7 @@ for (let key in funcs) {
       'sa sadfgsadfgh jk;hjkz;sadfg hjk;dfghjk;'
     ].forEach(arg => {
 
-      it(`returns true for palindromic string: '${arg}'`, function() {
+      xit(`returns true for palindromic string: '${arg}'`, function() {
         expect(func(arg.split(''))).to.be.true;
       });
 
@@ -37,7 +37,7 @@ for (let key in funcs) {
       'a b'
     ].forEach(arg => {
 
-      it(`returns false for non-palindromic string: '${arg}'`, function() {
+      xit(`returns false for non-palindromic string: '${arg}'`, function() {
         expect(func(arg.split(''))).to.be.false;
       });
 

@@ -10,11 +10,11 @@ for (let key in classes) {
       this.queue = new Queue();
     });
 
-    it('dequeue throws error when queue is empty', function () {
+    xit('dequeue throws error when queue is empty', function () {
       expect(() => this.queue.dequeue()).to.throw('queue is empty');
     });
 
-    it('can enqueue and dequeue items', function () {
+    xit('can enqueue and dequeue items', function () {
       for (let i = 0; i < 10; ++i) {
         let j;
         for (j = 1; j <= 100; ++j) {
@@ -26,7 +26,7 @@ for (let key in classes) {
       }
     });
 
-    it('can do alternating enqueue and dequeues', function() {
+    xit('can do alternating enqueue and dequeues', function() {
       this.queue.enqueue(10);
       this.queue.enqueue(20);
       this.queue.enqueue(30);

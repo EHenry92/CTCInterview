@@ -6,15 +6,15 @@ for (let key in funcs) {
 
   describe('ch4-q07: ' + key, function() {
 
-    it('returns project where there is only one project', function() {
+    xit('returns project where there is only one project', function() {
       expect(func([11], [])).to.eql([11]);
     });
 
-    it('returns projects in the reverse of supplied order with no dependencies', function() {
+    xit('returns projects in the reverse of supplied order with no dependencies', function() {
       expect(func([9, 1, 5, 6], [])).to.eql([6, 5, 1, 9]);
     });
 
-    it('returns in the right order with simple chain of dependencies', function() {
+    xit('returns in the right order with simple chain of dependencies', function() {
       expect(func([9, 1, 5, 6], [
         [6, 5],
         [5, 1],
@@ -22,7 +22,7 @@ for (let key in funcs) {
       ])).to.eql([9, 1, 5, 6]);
     });
 
-    it('throws an error when dependences are cyclic', function() {
+    xit('throws an error when dependences are cyclic', function() {
       expect(() => func([9, 1, 5, 6], [
         [6, 5],
         [5, 1],
@@ -31,7 +31,7 @@ for (let key in funcs) {
       ])).to.throw('dependencies are cyclic');
     });
 
-    it('correctly orders with larger acyclic graph', function() {
+    xit('correctly orders with larger acyclic graph', function() {
       expect(func([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], [
         [2, 1],
         [3, 1],

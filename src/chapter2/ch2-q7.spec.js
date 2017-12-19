@@ -15,7 +15,7 @@ for (let key in funcs) {
 
   describe('ch2-q7: ' + key, function() {
 
-    it('correctly identifies first node when both lists are the same', function() {
+    xit('correctly identifies first node when both lists are the same', function() {
       let list = generateList(10);
       expect(func(list.head, list.head)).to.equal(list.head);
     });
@@ -52,11 +52,11 @@ for (let key in funcs) {
         two = generateList(context.len2),
         common = generateList(context.lenCommon);
 
-      it(`returns undefined with list1:${context.len1} & list2:${context.len2} that do not intersect`, function() {
+      xit(`returns undefined with list1:${context.len1} & list2:${context.len2} that do not intersect`, function() {
         expect(func(one.head, two.head)).to.be.undefined;
       });
 
-      it(`returns correct node with list1:${context.len1} & list2:${context.len2} that intersect`, function() {
+      xit(`returns correct node with list1:${context.len1} & list2:${context.len2} that intersect`, function() {
         one.tail.next = two.tail.next = common.head;
         expect(func(one.head, two.head)).to.equal(common.head);
       });

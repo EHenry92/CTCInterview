@@ -10,7 +10,7 @@ for (let key in classes) {
       this.obj = new AnimalShelter();
     });
 
-    it('any returns whichever animal is in queue', function() {
+    xit('any returns whichever animal is in queue', function() {
       this.obj.enqueueCat('cat');
       expect(this.obj.dequeueAny()).to.equal('cat');
       expect(this.obj.dequeueAny()).to.be.undefined;
@@ -20,7 +20,7 @@ for (let key in classes) {
       expect(this.obj.dequeueAny()).to.be.undefined;
     });
 
-    it('returns animals in the right order', function() {
+    xit('returns animals in the right order', function() {
       for (let i = 0; i < 4; ++i) {
         this.obj.enqueueCat('cat' + i);
       }
@@ -30,7 +30,7 @@ for (let key in classes) {
       }
     });
 
-    it('returns animals in alternating order when enqueued that way', function() {
+    xit('returns animals in alternating order when enqueued that way', function() {
       for (let i = 20; i > 0; --i) {
         if (i & 1) {
           this.obj.enqueueCat(i);
@@ -45,7 +45,7 @@ for (let key in classes) {
       }
     });
 
-    it('correctly returns animals when enqueued alternating but dequeued one at a time', function() {
+    xit('correctly returns animals when enqueued alternating but dequeued one at a time', function() {
       for (let i = 20; i > 0; --i) {
         if (i & 1) {
           this.obj.enqueueCat(i);

@@ -7,7 +7,7 @@ for (let key in funcs) {
 
   describe('ch2-q1: ' + key, function() {
 
-    it('returns input if falsy', function() {
+    xit('returns input if falsy', function() {
       expect(func(null)).to.be.null;
       expect(func(undefined)).to.be.undefined;
     });
@@ -39,7 +39,7 @@ for (let key in funcs) {
       }
     ].forEach(context => {
 
-      it(`list ${context.list} correctly updated to ${context.expected}`, function() {
+      xit(`list ${context.list} correctly updated to ${context.expected}`, function() {
         let list = helpers.arrayToLinkedList(context.list);
         func(list);
         expect(helpers.linkedListToArray(list)).to.eql(context.expected);

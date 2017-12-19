@@ -7,12 +7,12 @@ for (let key in funcs) {
 
   describe('ch2-q2: ' + key, function() {
 
-    it('throws an error if list is not an array', function() {
+    xit('throws an error if list is not an array', function() {
       expect(() => func(null)).to.throw('invalid list');
       expect(() => func(undefined)).to.throw('invalid list');
     });
 
-    it('throws an error if list is shorter than k', function() {
+    xit('throws an error if list is shorter than k', function() {
       expect(() => func(helpers.arrayToLinkedList([1]), 1)).to.throw('list is not long enough');
       expect(() => func(helpers.arrayToLinkedList([1, 2, 3]), 3)).to.throw('list is not long enough');
       expect(() => func(helpers.arrayToLinkedList([1, 2, 3]), 4)).to.throw('list is not long enough');
@@ -45,7 +45,7 @@ for (let key in funcs) {
       }
     ].forEach(context => {
 
-      it(`can get the ${context.k}th to last element in ${context.list}`, function() {
+      xit(`can get the ${context.k}th to last element in ${context.list}`, function() {
         let list = helpers.arrayToLinkedList(context.list),
           expected = context.list[context.list.length - 1 - context.k];
         expect(func(list, context.k)).to.eql(expected);

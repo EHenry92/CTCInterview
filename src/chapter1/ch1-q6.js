@@ -1,33 +1,19 @@
-'use strict';
+export function strCompression (str) {
+  if(!str || str.length <= 1) {return str;}
+  let count = 1, out = '', char = str[0];
 
-/**
- * Takes an input string and counts contiguous sequences of the same character
- * and replaces them with XC (X = count, C = character).
- *
- * N = |str|
- * Time: O(N)
- * Additional space: O(N)
- *
- * @param  {string} str [description]
- * @return {[type]}     [description]
- */
-export function compressString(str) {
-  if (!str) {
-    return str;
-  }
-
-  let cStr = '';
-  for (let i = 0; i < str.length; ++i) {
-    let char = str[i],
-      start = i;
-    while (i + 1 < str.length && char === str[i + 1]) {
-      ++i;
+  for(let i=1; i<= str.length; i++) {
+    if (str[i] == char) {
+      count ++;
     }
-    // JS does not have a StringBuilder/StringBuffer style class for creating strings
-    // string concatenation has been heavily optimised in JS implementations and
-    // is faster than creating a string via an array then using a .join('') at the end
-    cStr += (i - start + 1) + char;
+    else {
+      out += (char + count);
+      count = 1;
+      char = str[i];
+      if( out.length >= str.length) {
+        return str;
+      }
+    }
   }
-
-  return cStr.length < str.length ? cStr : str;
+  return out;
 }

@@ -17,7 +17,7 @@ for (let key in classes) {
       this.obj = new Class();
     });
 
-    it('returns single number when only one item in tree', function() {
+    xit('returns single number when only one item in tree', function() {
       this.obj.insert(1);
       expect(this.obj.randomNode().val).to.equal(1);
       expect(this.obj.randomNode().val).to.equal(1);
@@ -49,17 +49,17 @@ for (let key in classes) {
           context.values.forEach(v => this.obj.insert(v));
         });
 
-        it('returns random number in range', function() {
+        xit('returns random number in range', function() {
           expect(this.obj.randomNode().val).to.be.within(1, 15);
         });
 
-        it('returns all numbers in range over 1000 calls', function() {
+        xit('returns all numbers in range over 1000 calls', function() {
           let gotValue = (new Array(15)).fill(false);
           runSampling(gotValue, this.obj, 1000);
           expect(gotValue.every(v => v)).to.be.true;
         });
 
-        it('returns valid numbers in range over 1000 calls where deletions are done', function() {
+        xit('returns valid numbers in range over 1000 calls where deletions are done', function() {
           let pickedValues;
 
           this.obj.delete(1);

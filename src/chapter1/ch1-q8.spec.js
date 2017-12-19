@@ -6,12 +6,12 @@ for (let key in funcs) {
 
   describe('ch1-q8: ' + key, function() {
 
-    it('throws an error when null/undefined/empty matrix', function() {
+    xit('throws an error when null/undefined/empty matrix', function() {
       expect(() => func(null)).to.throw('invalid matrix');
       expect(() => func(undefined)).to.throw('invalid matrix');
     });
 
-    it('returns matrix unchanged with 1,1 matrix', function() {
+    xit('returns matrix unchanged with 1,1 matrix', function() {
       let matrix = [[0]];
       expect(func(matrix)).to.eql(matrix);
     });
@@ -71,7 +71,7 @@ for (let key in funcs) {
       }
     ].forEach(context => {
 
-      it(`zeros a ${context.matrix.length}x${context.matrix[0].length} matrix correctly`, function() {
+      xit(`zeros a ${context.matrix.length}x${context.matrix[0].length} matrix correctly`, function() {
         expect(func(context.matrix)).to.eql(context.expected);
       });
 

@@ -11,21 +11,21 @@ for (let key in funcs) {
       this.tree = new Tree();
     });
 
-    it('throws an error if either node is null', function() {
+    xit('throws an error if either node is null', function() {
       this.tree.add(1);
       expect(() => func(null, null)).to.throw('node1 and node2 must both be valid nodes');
       expect(() => func(this.tree.root, null)).to.throw('node1 and node2 must both be valid nodes');
       expect(() => func(null, this.tree.root)).to.throw('node1 and node2 must both be valid nodes');
     });
 
-    it('returns right value for simple 3 node balanced tree', function() {
+    xit('returns right value for simple 3 node balanced tree', function() {
       [10, 9, 11].forEach(v => this.tree.add(v));
       expect(func(this.tree.root.left, this.tree.root.right)).to.equal(10);
       expect(func(this.tree.root, this.tree.root.right)).to.equal(10);
       expect(func(this.tree.root.left, this.tree.root)).to.equal(10);
     });
 
-    it('returns correct values for larger balanced tree', function() {
+    xit('returns correct values for larger balanced tree', function() {
       [8, 4, 12, 2, 6, 10, 14, 1, 3, 5, 7, 9, 11, 13, 15].forEach(v => this.tree.add(v));
 
       expect(func(this.tree.root.left.left.left, this.tree.root.left.left.left)).to.equal(1);

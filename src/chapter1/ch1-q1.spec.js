@@ -13,7 +13,7 @@ for (let key in funcs) {
       'AaBbCcDdeFg1234567890(*&^%$#@!)'
     ].forEach(arg => {
 
-      it(`returns true for unique string: '${arg}'`, function() {
+      xit(`returns true for unique string: '${arg}'`, function() {
         expect(func(arg.split(''))).to.be.true;
       });
 
@@ -27,7 +27,7 @@ for (let key in funcs) {
       '!@#$%^&*()(*#($&#(*$&#*($&#()))))'
     ].forEach(arg => {
 
-      it(`returns false for string with dupes: '${arg}'`, function() {
+      xit(`returns false for string with dupes: '${arg}'`, function() {
         expect(func(arg.split(''))).to.be.false;
       });
 

@@ -11,23 +11,23 @@ for (let key in funcs) {
       this.tree = new Tree();
     });
 
-    it('throws an error if node is null', function() {
+    xit('throws an error if node is null', function() {
       expect(() => func(null)).to.throw('node cannot be null');
     });
 
-    it('returns undefined for root of single node tree', function() {
+    xit('returns undefined for root of single node tree', function() {
       this.tree.add(10);
       expect(func(this.tree.root)).to.be.undefined;
     });
 
-    it('returns right value for simple 3 node balanced tree', function() {
+    xit('returns right value for simple 3 node balanced tree', function() {
       [10, 9, 11].forEach(v => this.tree.add(v));
       expect(func(this.tree.root.left)).to.equal(10);
       expect(func(this.tree.root)).to.equal(11);
       expect(func(this.tree.root.right)).to.be.undefined;
     });
 
-    it('returns correct values for larger balanced tree', function() {
+    xit('returns correct values for larger balanced tree', function() {
       [8, 4, 12, 2, 6, 10, 14, 1, 3, 5, 7, 9, 11, 13, 15].forEach(v => this.tree.add(v));
 
       expect(func(this.tree.root.left.left.left)).to.equal(2);
